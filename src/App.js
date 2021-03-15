@@ -21,13 +21,19 @@ state={
     this.setState({cv:te,iv:''});
     console.log(this.state.cv);
   };
+  handleKeyDown=(e)=>{
+    if (e.key === 'Enter') {
+      this.oc();
+      console.log('do validate');
+    }
+  }
 render(){
   return (
     <div>
       <Layout>
         <Header>
           <center>
-            <h1>College Enquiry Chatbot</h1>
+            <h1 style={{color:"white"}}>College Enquiry Chatbot</h1>
           </center>
         </Header>
         <Content
@@ -43,8 +49,8 @@ render(){
         </Content>
         <Footer>
           <div class="send">
-            <Input placeholder="Type here"  value={this.state.iv} onChange={this.onc}/>
-            <Button onClick={this.oc}>
+            <Input placeholder="Type here"  className="ca" value={this.state.iv} onKeyDown={this.handleKeyDown} onChange={this.onc}/>
+            <Button className="ca" onClick={this.oc}>
               <SendIcon />
             </Button>
           </div>
