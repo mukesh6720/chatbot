@@ -6,6 +6,9 @@
 .send {
   display: flex;
   justify-content: space-around;
+  border: 2px solid grey;
+  border-radius: 25px;
+  background-color: white;
 }
 #components-layout-demo-fixed .logo {
   float: left;
@@ -16,4 +19,8 @@
 }
 .site-layout .site-layout-background {
   background: #fff;
+}
+.ca{
+ border:none;
+ border-radius: 25px;
 }
